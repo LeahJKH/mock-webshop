@@ -1,12 +1,13 @@
 import NewProductCard from "../../components/ProductCards/NewProductCard";
 import newProd from "../../json/productsNew.json"
-
+import "./home.css"
 export default function Home() {
   const newPath = "./images"; 
   return (
     <main>
-      <section>
-        <div>
+      <section className="fullContNew">
+        <h2 className="headingNew">NEW PRODUCTS!</h2>
+        <div className="NewProducts">
           {newProd.map((e) => (
             <NewProductCard 
               key={e.title} 
@@ -14,6 +15,7 @@ export default function Home() {
               alt={e.alt}
               desc={e.desc}
               title={e.title}
+              price={e.price}
               path={newPath} 
             />
           ))}

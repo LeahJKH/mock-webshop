@@ -1,6 +1,6 @@
 .card {
 background-color: var(--accent-col);
-width: 40%;
+min-width: 375px;
 display: flex;
 gap: 5px;
 }

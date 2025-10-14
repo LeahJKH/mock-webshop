@@ -1,0 +1,22 @@
+main {
+    padding-top: 25px;
+}
+.NewProducts {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: fit-content;
+    overflow: auto;
+    gap: 15px;
+    margin: auto;
+}
+.fullContNew {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.headingNew {
+color: var(--red-accent);
+}
