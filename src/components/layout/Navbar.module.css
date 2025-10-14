@@ -1,17 +1,27 @@
 .logo {
 }
 
+.navbar {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(214, 21%, 53%);
+}
 .searchBar {
+  height: 34px;
 }
 
 .SearchIcon {
+  width: 34px;
+}
+.SearchIcon:hover {
+  cursor: pointer;
 }
 
 .iconSize {
+  width: 42px;
 }
 
 .navText {
-}
-
-.row {
+  font-size: 20px;
 }

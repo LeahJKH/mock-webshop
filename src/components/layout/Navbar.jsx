@@ -1,9 +1,17 @@
 import { Link } from "react-router";
 import Style from "./Navbar.module.css";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    console.log(e);
+    console.log(`Searching for: ${search}`);
+  };
+
   return (
-    <nav>
+    <nav className={`${Style.navbar} column`}>
       <section className="row">
         <img src="" alt="" className={Style.logo} />
         <input
@@ -11,38 +19,37 @@ export default function Navbar() {
           name="searchbar"
           id="searchbar"
           placeholder="What are you looking for?"
-          value={""}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           className={Style.searchBar}
         />
-        <label htmlFor="searchbar">
+
+        <img
+          onClick={handleSearch}
+          src="/svgIcons/search.svg"
+          alt="search icon"
+          className={Style.SearchIcon}
+        />
+        <div className="row">
           <Link to="#">
             <img
-              src="./svgIcons/search.svg"
-              alt=""
-              className={Style.SearchIcon}
-            />
-          </Link>
-        </label>
-        <div className="row">
-          <div>
-            <img
-              src="./svgIcons/user.svg"
+              src="/svgIcons/user.svg"
               alt="an icon of a person"
               className={Style.iconSize}
             />
             <p className={Style.navText}>Log in</p>
-          </div>
-          <div>
+          </Link>
+          <Link to="#">
             <img
-              src="./svgIcons/userPlus.svg"
+              src="/svgIcons/userPlus.svg"
               alt="an icon of a person with a pluss sign"
               className={Style.iconSize}
             />
             <p className={Style.navText}>Create Account</p>
-          </div>
+          </Link>
           <Link to="#">
             <img
-              src="./svgIcons/cart.svg"
+              src="/svgIcons/cart.svg"
               alt="an icon of a shopping cart"
               className={Style.iconSize}
             />
