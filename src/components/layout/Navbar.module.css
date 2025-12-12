@@ -10,7 +10,19 @@
 .searchBar {
   height: 34px;
 }
-
+.topMenuDiv {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.MenuItems {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 .SearchIcon {
   width: 34px;
 }
@@ -24,4 +36,8 @@
 
 .navText {
   font-size: 20px;
+}
+.priceRed {
+  color: var(--red-accent);
+  text-decoration: line-through;
 }

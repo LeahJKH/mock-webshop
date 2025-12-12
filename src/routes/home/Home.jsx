@@ -16,6 +16,7 @@ export default function Home() {
               desc={e.desc}
               title={e.title}
               price={e.price}
+              oldPrice={e.oldPrice}
               path={newPath} 
             />
           ))}

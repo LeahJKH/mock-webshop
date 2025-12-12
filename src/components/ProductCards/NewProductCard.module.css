@@ -47,8 +47,12 @@ color: var(--dark-soft);
 
 }
 .contBtn {
-
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 25px
 }
 .price {
-
+color: var(--green-accent);
+text-decoration:underline;
 }

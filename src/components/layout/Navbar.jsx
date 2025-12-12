@@ -11,8 +11,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`${Style.navbar} column`}>
-      <section className="row">
+    <nav className={`${Style.navbar} row`}>
+            <Link to="/">Home</Link>
+      <section className={Style.topMenuDiv}>
         <img src="" alt="" className={Style.logo} />
         <input
           type="text"
@@ -30,7 +31,7 @@ export default function Navbar() {
           alt="search icon"
           className={Style.SearchIcon}
         />
-        <div className="row">
+        <div className={Style.MenuItems}>
           <Link to="#">
             <img
               src="/svgIcons/user.svg"
@@ -57,7 +58,7 @@ export default function Navbar() {
           </Link>
         </div>
       </section>
-      <Link to="/">Home</Link>
+
     </nav>
   );
 }
